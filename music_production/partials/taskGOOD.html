@@ -1,0 +1,111 @@
+<!-- this file is the ng-app -->
+<div class="widget-box" id="recent-box" ng-controller="tasksController">
+	<div class="widget-header header-color-blue">
+		<div class="row">
+			<div class="col-sm-5">
+			  <h4 class="bigger lighter">
+				  <i class="glyphicon glyphicon-align-justify">
+					</i>&nbsp;OPEN SESSIONS
+			  </h4>
+			</div>
+
+			<!-- <div class="col-sm-3">
+			  <button ng-click="addNewClicked=!addNewClicked;" class="btn btn-sm btn-danger header-elements-margin">
+					<i class="glyphicon  glyphicon-plus">
+					</i>&nbsp;Add New Task
+				</button>
+			</div> -->
+
+			<div class="col-sm-7">
+			  <input type="text"
+				       ng-model="filterTask"
+	             class="form-control search header-elements-margin"
+							 placeholder="Type a month and date to search">
+			</div>
+		</div>
+  </div>
+
+	<div class="widget-body ">
+		<!-- <form ng-init="addNewClicked=false; " ng-if="addNewClicked" id="newTaskForm" class="add-task">
+			<div class="form-actions">
+				<div class="input-group">
+				  <input type="text" class="form-control"
+					                   name="comment"
+														 ng-model="taskInput"
+														 placeholder="Add New Task"
+														 ng-focus="addNewClicked">
+				  <div class="input-group-btn">
+				    <button class="btn btn-default" type="submit" ng-click="addTask(taskInput)">
+							<i class="glyphicon glyphicon-plus"></i>&nbsp;Add New Task
+						</button>
+				  </div>
+			  </div>
+			</div>
+		</form> -->
+
+			<div class="task">
+				<label class="checkbox" ng-repeat="task in tasks | filter : filterTask">
+			    <input
+						type="checkbox"
+						value="{{task.STATUS}}"
+						ng-checked="task.STATUS==2"
+						ng-click="toggleStatus(task.ID,task.STATUS, task.TASK)"/>
+				  <span ng-class="{strike:task.STATUS==2}">{{task.TASK}}</span>
+				  <!-- <a ng-click="deleteTask(task.ID)" class="pull-right">
+						<i class="glyphicon glyphicon-trash"></i>
+					</a> -->
+			  </label>
+		  </div>
+
+<!--TODO:need FORM and to  prevent form from submission without validating fields-->
+			<!-- Modal content-->
+			<!-- Modal -->
+   <div class="modal fade" id="myModal3" role="dialog">
+     <div class="modal-dialog">
+
+       <!-- Modal content-->
+       <div class="modal-content">
+         <div class="modal-header">
+           <!-- <button type="button" class="close" data-dismiss="modal">×</button> -->
+           <h4 class="modal-title">Please submit your name and email.</h4>
+         </div>
+
+         <div class="modal-body">
+					 <form method="POST" action="/music_production/php/scheduleMailer.php">
+					 	 <div class="col-md-8">
+							 <div class="row">                      <!-- forms -->
+								 <div class="col-sm-6 form-group">
+									 <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required>
+								 </div>
+
+									<div class="col-sm-6 form-group">
+										<input class="form-control" id="email" name="email" type="email" placeholder="Your Email" type="text" required>
+									</div>
+
+									<!-- <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"> -->
+									<textarea class="form-control" id="demo" name="comments" placeholder="Comment" rows="5" readonly>
+									</textarea> <!-- TODO: make comment section smaller on xs -->
+
+									<div class="row">
+										<div class="col-md-12 form-group"> <!-- TODO: space out the button on the XSmobile version-->
+											<!-- <button class="btn pull-right" type="submit">Send</button> -->
+
+											<!-- <input class="btn pull-right" type="submit" value="Confirm" name="submit" data-dismiss="modal"> -->
+											<input class="btn pull-right" type="submit" value="Confirm" name="submit">
+										</div>                               <!-- TODO: push the button down on wide mobile -->
+									</div>
+
+							 </div> <!-- closes row -->
+						 </div> <!-- closes col-md-8 -->
+					 </form>
+         </div>
+
+         <div class="modal-footer">
+           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+					 <p>To confirm your session, please fill out the form.</p>
+         </div>
+       </div><!-- end modal -->
+
+
+	</div>
+</div>

@@ -1,0 +1,31 @@
+Logging into the back-end admin section
+-------------------------------------------------
+1.  navigate to events.dlproductions.biz/wp-admin
+2.  enter your username and credentials
+
+Posting
+---------------------------------------------------
+3.  To make a post: click on 'Dashboard' link if you're not there already.
+4.  Click on 'Write your first blog post'. (trust me)
+5.  Create desired header text where it says: 'enter title here.'
+6.  To add images, click 'Add Media' button. (I used copied the url of the Spring Sessions flyer from your Facebook feed.)
+7.  Add other text as desired and click the 'Publish' button on the right-hand side.
+
+Updating Events Calendar
+------------------------------------------------
+8.  To update calendar, once again access the Dashboard
+9.  If new venue, click on events. Else skip to step 12.
+10. Enter name of venue, and type address of venue in the text box located in the top of the map under the venue location section
+11. Click 'Publish' button.
+12. If you wish to specify the organizer, click on 'Organizer' link and follow simialar steps in that section (don't forget to publish).
+13. Click the 'Events' link on Dashboard, and click 'Add New.'
+14. Specify start and end times by using the point-and-click menu. (time is in military. WILL TRY TO FIX)
+15. Select venue from predefined dropdown menu (if your venue isn't listed, return to step 10).
+16. Under the featured image section, you can upload an image file.
+17. You can also select the Organizer if you wish.
+18. On the right side, click the 'Calendar 1' Box. 
+19. Click publish.
+20. Check to make everything looks okay.
+21. If something is wrong or missing, return to the Dashboard and click Events > All Events.
+22. Hover over the incorrectly notated event and click on 'Edit'.
+23. Keep Calendar updated. 
